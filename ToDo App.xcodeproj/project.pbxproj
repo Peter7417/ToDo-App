@@ -55,12 +55,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		600AE53F255E46CD00C8CFB4 /* View Controller */ = {
+		600AE53F255E46CD00C8CFB4 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
 				60208A6F25550F7F00B54804 /* ToDoListViewController.swift */,
 			);
-			path = "View Controller";
+			path = Contoller;
 			sourceTree = "<group>";
 		};
 		60208A5F25550F7F00B54804 = {
@@ -85,7 +85,7 @@
 				60208A6B25550F7F00B54804 /* AppDelegate.swift */,
 				60208A6D25550F7F00B54804 /* SceneDelegate.swift */,
 				600AE53A255E466100C8CFB4 /* Model */,
-				600AE53F255E46CD00C8CFB4 /* View Controller */,
+				600AE53F255E46CD00C8CFB4 /* Contoller */,
 				600AE53E255E46C700C8CFB4 /* Views */,
 				60208A7425550F8000B54804 /* Assets.xcassets */,
 				60208A7625550F8000B54804 /* LaunchScreen.storyboard */,
