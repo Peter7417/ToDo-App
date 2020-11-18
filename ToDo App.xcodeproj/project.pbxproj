@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		600AE53C255E467E00C8CFB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AE53B255E467E00C8CFB4 /* Item.swift */; };
 		60208A6C25550F7F00B54804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60208A6B25550F7F00B54804 /* AppDelegate.swift */; };
 		60208A6E25550F7F00B54804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60208A6D25550F7F00B54804 /* SceneDelegate.swift */; };
 		60208A7025550F7F00B54804 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60208A6F25550F7F00B54804 /* ToDoListViewController.swift */; };
 		60208A7325550F7F00B54804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60208A7125550F7F00B54804 /* Main.storyboard */; };
 		60208A7525550F8000B54804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60208A7425550F8000B54804 /* Assets.xcassets */; };
 		60208A7825550F8000B54804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60208A7625550F8000B54804 /* LaunchScreen.storyboard */; };
+		605BD1342564CE7B0042292E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 605BD1322564CE7B0042292E /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		600AE53B255E467E00C8CFB4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		60208A6825550F7F00B54804 /* ToDo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60208A6B25550F7F00B54804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60208A6D25550F7F00B54804 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +25,7 @@
 		60208A7425550F8000B54804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60208A7725550F8000B54804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60208A7925550F8000B54804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605BD1332564CE7B0042292E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		600AE53A255E466100C8CFB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				600AE53B255E467E00C8CFB4 /* Item.swift */,
+				605BD1322564CE7B0042292E /* DataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600AE53C255E467E00C8CFB4 /* Item.swift in Sources */,
+				605BD1342564CE7B0042292E /* DataModel.xcdatamodeld in Sources */,
 				60208A7025550F7F00B54804 /* ToDoListViewController.swift in Sources */,
 				60208A6C25550F7F00B54804 /* AppDelegate.swift in Sources */,
 				60208A6E25550F7F00B54804 /* SceneDelegate.swift in Sources */,
@@ -371,6 +371,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		605BD1322564CE7B0042292E /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				605BD1332564CE7B0042292E /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 605BD1332564CE7B0042292E /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 60208A6025550F7F00B54804 /* Project object */;
 }
