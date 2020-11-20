@@ -22,7 +22,7 @@ class ToDoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+//        print (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         loadData()
         
 //        if let items = defaults.array(forKey: "ToDoListArray") as? [Item]{
@@ -124,18 +124,42 @@ class ToDoListViewController: UITableViewController {
 //        }
 //    }
     
-    func loadData() {
-    
-    let request : NSFetchRequest<Item> = Item.fetchRequest()
+    func loadData(with request : NSFetchRequest<Item> = Item.fetchRequest()) {
     
         do {
         toDoArray = try context.fetch(request)
         } catch {
             print ("Error fetching data \(error)")
         }
+        tableView.reloadData()
     }
     
 }
 
 
-
+extension ToDoListViewController : UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        
+        let searchItem = searchBar.text!
+        
+        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchItem)
+        
+        request.sortDescriptors  = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        loadData(with: request)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0{
+            loadData()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+            
+        }
+    }
+    
+}

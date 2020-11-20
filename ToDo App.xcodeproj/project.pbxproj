@@ -14,6 +14,7 @@
 		60208A7525550F8000B54804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60208A7425550F8000B54804 /* Assets.xcassets */; };
 		60208A7825550F8000B54804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60208A7625550F8000B54804 /* LaunchScreen.storyboard */; };
 		605BD1342564CE7B0042292E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 605BD1322564CE7B0042292E /* DataModel.xcdatamodeld */; };
+		605BD15D25676F810042292E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605BD15C25676F810042292E /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		60208A7725550F8000B54804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60208A7925550F8000B54804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		605BD1332564CE7B0042292E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		605BD15C25676F810042292E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		600AE53F255E46CD00C8CFB4 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				605BD15C25676F810042292E /* CategoryViewController.swift */,
 				60208A6F25550F7F00B54804 /* ToDoListViewController.swift */,
 			);
 			path = Contoller;
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605BD15D25676F810042292E /* CategoryViewController.swift in Sources */,
 				605BD1342564CE7B0042292E /* DataModel.xcdatamodeld in Sources */,
 				60208A7025550F7F00B54804 /* ToDoListViewController.swift in Sources */,
 				60208A6C25550F7F00B54804 /* AppDelegate.swift in Sources */,
