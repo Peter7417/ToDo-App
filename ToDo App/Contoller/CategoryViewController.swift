@@ -10,7 +10,7 @@ import CoreData
 
 class CategoryViewController: UITableViewController {
     
-    var itemName = [Category]()
+    var categories = [Category]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -23,14 +23,14 @@ class CategoryViewController: UITableViewController {
     //MARK: - TableView DataSource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemName.count
+        return categories.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         
-        cell.textLabel?.text = itemName[indexPath.row].name
+        cell.textLabel?.text = categories[indexPath.row].name
         
         cell.accessoryType = .disclosureIndicator
         
@@ -40,7 +40,14 @@ class CategoryViewController: UITableViewController {
     //MARK: - TableVIew Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: "goToItems", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ToDoListViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedCategory = categories[indexPath.row]
+        }
     }
     
     //MARK: - Add New Categories
@@ -54,7 +61,7 @@ class CategoryViewController: UITableViewController {
         let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
             let newCategory = Category(context: self.context)
             newCategory.name = textField.text!
-            self.itemName.append(newCategory)
+            self.categories.append(newCategory)
             self.saveData()
         }
         
@@ -83,7 +90,7 @@ class CategoryViewController: UITableViewController {
     
     func loadData(with request : NSFetchRequest<Category> = Category.fetchRequest()) {
         do{
-            itemName = try context.fetch(request)
+            categories = try context.fetch(request)
         }catch{
             print ("Error loading data \(error)")
         }
